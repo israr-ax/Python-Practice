@@ -21,10 +21,20 @@ print(f"The min value in list is {min(l)}.\nThe max value in List is {max(l)}.\n
 #REMOVE DUPLICATE NUMBER FROM LIST
 
 rem_dup=[x for i, x in enumerate(l) if x not in l[:i] ]
-print(rem_dup)
+print(f"Remove Duplicate Number in List:  {rem_dup}")
 
 
 
 #REVERSE OF A LIST
 a=rem_dup[::-1]
-print(a)
+print(f"Resverse of list: {a}")
+
+# Find the second largest number in a list
+def second_large(num):
+    a=sorted(num)
+    reversed_list=a[::-1]
+    return reversed_list[1]
+
+l1=[10,20,9,5,55,21,8]
+
+print(f"List: {l1} \nThe second largest number in list is {second_large(l1)}")
