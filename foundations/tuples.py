@@ -23,3 +23,24 @@ rem_depli=[x for i, x in enumerate(my_tuple2) if x not in my_tuple2[:i]]
 element=3
 fin_index=rem_depli.index(element)
 print(f"Remove Duplicate elements from tuples: {rem_depli} \nIndex of {element} : {fin_index}")
+
+# Check if a tuple is a palindrome.
+print("Q:4- Check if a tuple is a palindrome.\n Palindrome means sequence that reads the same forwards and backwards")
+
+def plaindrome(t):
+    return t==t[::-1]
+cities=('KARACHI', "LAHORE","KARACHI")
+print(f"cities:{cities} \n{plaindrome(cities)}")
+
+def is_plaindrome(t):
+    left=0
+    right=len(t)-1
+    while left < right:
+        if t[left] != t[right]:
+            return False
+        left +=1
+        right -=1
+    return True
+T=('A','B','C','B', 'A')
+Names=('Ali','Ahmed','Zai')    
+print(f"Tuple:{T}:      {is_plaindrome(T)}.\nNames:{Names}:     {is_plaindrome(Names)}")
