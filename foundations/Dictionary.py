@@ -35,3 +35,12 @@ for key in dict2:
     merged[key]=dict2[key]
 print(f"Dict_1:{dict1} \nDict_2:{dict2} \nAfter merging both dicts:{merged}")
     
+# 4.Sort a Dictionary by Values
+print("4. Sort a Dictionary by Values")
+sorted_data= dict(sorted(students.items(), key=lambda item:item[1]))
+print(f"Data:{students} \nSoted data:{sorted_data}")
+
+# 5.Find the Key With the Maximum Value
+print("5. Find the Key With the Maximum Value")
+max_data=max(students, key=students.get)
+print(f"Data:{students} \nTopper:{max_data}")
